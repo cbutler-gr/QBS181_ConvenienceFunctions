@@ -1,0 +1,5 @@
+\contentsline {subsection}{completeFun}{1}{page.1}
+\contentsline {subsection}{factorial}{2}{page.2}
+\contentsline {subsection}{gm\_mean}{2}{page.2}
+\contentsline {subsection}{Modes}{3}{page.3}
+\contentsline {subsection}{nonUnique}{3}{page.3}

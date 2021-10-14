@@ -1,0 +1,182 @@
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `ConvenienceFunctions'}}
+\par\bigskip{\large \today}
+\end{center}
+\inputencoding{utf8}
+\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdftitle = {ConvenienceFunctions: Convenience functions for R for QBS181}}}{}\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdfauthor = {Carly Bobak}}}{}\begin{description}
+\raggedright{}
+\item[Type]\AsIs{Package}
+\item[Title]\AsIs{Convenience functions for R for QBS181}
+\item[Version]\AsIs{0.1.0}
+\item[Author]\AsIs{Carly Bobak}
+\item[Description]\AsIs{We proide general utilities for common taks in data wrangling}
+\item[License]\AsIs{MIT}
+\item[Depends]\AsIs{R (>= 3.5.0)}
+\item[Encoding]\AsIs{UTF-8}
+\item[LazyData]\AsIs{true}
+\item[Imports]\AsIs{stats,
+ggplot2}
+\item[RoxygenNote]\AsIs{7.1.2}
+\end{description}
+\Rdcontents{\R{} topics documented:}
+\inputencoding{utf8}
+\HeaderA{completeFun}{Drop NAs by Columns}{completeFun}
+%
+\begin{Description}\relax
+Remove NAs based on specified columns in the data
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+completeFun(data, desiredCols)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{data}] data.frame object of variations
+
+\item[\code{desiredCols}] list of columns from which incomplete cases should be dropped
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+dataframe with removed observations
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+data<-data.frame(a=1:4,b=c("a","b","c","d"),c=c(NA,"keep",NA,"keep"))
+completeFun(data,c("c"))
+
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{factorial}{Factorial}{factorial}
+%
+\begin{Description}\relax
+Function to calculate the factorial of a variable
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+factorial(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] numeric vector
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+numeric value of factorial
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+factorial(5)
+
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{gm\_mean}{Geometric mean}{gm.Rul.mean}
+%
+\begin{Description}\relax
+Function to calculate the geometric mean of a variable
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+gm_mean(x, na.rm = TRUE)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] numeric vector
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+numeric value of geometric mean
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+x<-c(1,1,3,5,6,6)
+gm_mean(x)
+
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{Modes}{Mode}{Modes}
+%
+\begin{Description}\relax
+Function to calculate the mode of a variable
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+Modes(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] numeric vector
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+numeric vector of modes
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+x<-c(1,1,3,5,6,6)
+Modes(x)
+
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{nonUnique}{Non-unique}{nonUnique}
+%
+\begin{Description}\relax
+Function that returns all non-unique values in a vector
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+nonUnique(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] numeric or character vector
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+numeric or character vector of non-unique values
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+x<-c(1,1,3,5,6,6)
+nonUnique(x)
+
+\end{ExampleCode}
+\end{Examples}
+\printindex{}
+\end{document}
